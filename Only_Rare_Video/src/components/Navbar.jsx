@@ -6,7 +6,7 @@ import Logo from "./Logo";
 function Navbar() {
   return (
     <section>
-      <header className="p-4 d-flex justify-content-around bg-warning ">
+      <header className="p-4 d-flex align-items-center justify-content-around bg-warning ">
         <NavLink to="/about">About</NavLink>
         <NavLink to="/collection">Collection</NavLink>
         <Logo />

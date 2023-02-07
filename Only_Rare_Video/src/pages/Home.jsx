@@ -1,8 +1,11 @@
 //ROUTE PAGES GO IN ANOTHER FOLDER, not COMPONENT
+
 import { useEffect, useState } from "react";
 import { Card_Home } from "../components/Card_Home";
 import { CustomFooter } from "../components/CustomFooter";
+import { Error } from "../components/Error";
 import { List } from "../components/List";
+import { Loading } from "../components/Loading";
 
 import Navbar from "../components/Navbar";
 
@@ -12,9 +15,11 @@ function Home() {
 
   const [error, setError] = useState(null);
   const [content, setContent] = useState("");
-  const [isLoading, setIsLoading] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   const fetchGetAll = async () => {
+    setIsLoading(true);
+
     console.log("I start when page loads");
 
     try {
@@ -38,13 +43,22 @@ function Home() {
       setError(error);
       console.log(error);
     }
+    setIsLoading(false);
   };
 
-  let final = <div>sooo</div>;
+  let final;
+
+  if (isLoading == true) {
+    final = <Loading />;
+  }
 
   if (content.length > 0) {
     console.log(content); //Here I AM FILLED!
     final = <List content={content} />; //metti props
+  }
+
+  if (error) {
+    final = <Error />;
   }
 
   //This useEffect to load when page loads!
@@ -53,7 +67,7 @@ function Home() {
   }, []);
 
   return (
-    <section>
+    <section className="bg-dark">
       <Navbar></Navbar>
       <section className="mt-5">{final}</section>
       <CustomFooter />

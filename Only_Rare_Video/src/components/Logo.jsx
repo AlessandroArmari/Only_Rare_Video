@@ -1,5 +1,5 @@
 function Logo() {
-  return <div>I'm A logo</div>;
+  return <h3>I'm a logo</h3>;
 }
 
 export default Logo;

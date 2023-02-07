@@ -1,5 +1,5 @@
 const CustomFooter = () => {
-  return <footer>I am a footer!</footer>;
+  return <footer className="mt-5">I am a footer!</footer>;
 };
 
 export { CustomFooter };
