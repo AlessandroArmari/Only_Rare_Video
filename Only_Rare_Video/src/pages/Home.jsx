@@ -6,7 +6,6 @@ import { CustomFooter } from "../components/CustomFooter";
 import { Error } from "../components/Error";
 import { List } from "../components/List";
 import { Loading } from "../components/Loading";
-
 import Navbar from "../components/Navbar";
 
 function Home() {

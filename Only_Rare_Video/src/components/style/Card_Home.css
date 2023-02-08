@@ -1,10 +1,17 @@
-img:hover {
-  opacity: 0.3;
-  transition: 1s;
-}
-
-img:hover::before {
+img {
   opacity: 1;
   transition: 1s;
-  background-color: red;
+  filter: brightness(100%);
+  filter: contrast(100%);
+  filter: saturate(100%);
+}
+
+img:hover {
+  opacity: 0.2;
+  transition: 1s;
+  filter: brightness(200%);
+  filter: contrast(200%);
+  /* filter: drop-shadow(8px 8px 10px red);
+  filter: invert(100%);*/
+  filter: saturate(300%);
 }
