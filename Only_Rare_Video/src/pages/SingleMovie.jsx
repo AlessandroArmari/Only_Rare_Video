@@ -37,6 +37,10 @@ const SingleMovie = () => {
 
   let final = "";
 
+  if (isLoading == true) {
+    final = <div className="bg-warning">Loading</div>;
+  }
+
   //I do not use content.length because my content isn't an array
   // but a single object!
   if (content != null) {
@@ -53,6 +57,7 @@ const SingleMovie = () => {
       <Navbar></Navbar>
       <section className="container">
         <section className="row mt-5">
+          {isLoading && final}
           <img
             className="col-4 img-fluid  "
             src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a6/Happening_poster.jpg/220px-Happening_poster.jpg"
