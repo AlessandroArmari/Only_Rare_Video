@@ -1,3 +1,10 @@
-li:hover {
-  background-color: hsla(120, 100%, 50%, 0.3);
+img:hover {
+  opacity: 0.3;
+  transition: 1s;
+}
+
+img:hover::before {
+  opacity: 1;
+  transition: 1s;
+  background-color: red;
 }
