@@ -39,6 +39,7 @@ function Home() {
           title: elem.title,
           sanitizeTitle: elem.sanitizeTitle,
           url: elem.image,
+          genre: elem.genre,
         };
       });
       console.log(dataMapped);

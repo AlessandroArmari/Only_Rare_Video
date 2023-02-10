@@ -84,16 +84,17 @@ const SingleMovie = () => {
           {isLoading && final}
 
           <img
-            className="col-4 p-0 img-fluid rounded border border-2 border-white "
+            className="col-4 p-0 ms-4 img-fluid rounded border border-2 border-white "
             src={final.image}
             alt=""
           />
-          <div className="p-3 col-7 align-self-top text-white rounded border border-2 border-white">
+          <div className="ps-5 pe-5 col-7 align-self-top text-white  ">
             <div className="mb-3">Title: {final.title}</div>
             <div className="mb-3">+++ERROR+++ {final.title} </div>
             {/* ERROR */}
             <div className="mb-3">Year: {final.year}</div>
             <div className="mb-3">Running time: {final.running_time} min.</div>
+            <div className="mb-3">Genre: {final.genre}</div>
             <div className="mb-3">Plot: {final.plot}</div>
             {/* HERE I'M POINTING THE full property in the object director in the object final */}
           </div>

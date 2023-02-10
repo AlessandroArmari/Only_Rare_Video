@@ -12,6 +12,7 @@ const List = ({ content }) => {
               url={elem.url}
               title={elem.title}
               sanitizeTitle={elem.sanitizeTitle}
+              genre={elem.genre}
             />
           );
         })}
