@@ -1,4 +1,4 @@
-img {
+.img-overlay {
   opacity: 1;
   transition: 1s;
   filter: brightness(100%);
@@ -6,7 +6,7 @@ img {
   filter: saturate(100%);
 }
 
-img:hover {
+.img-overlay:hover {
   opacity: 0.2;
   transition: 1s;
   filter: brightness(200%);

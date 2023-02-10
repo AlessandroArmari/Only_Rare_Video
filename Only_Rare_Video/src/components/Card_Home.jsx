@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./style/Card_Home.css";
 
-const Card_Home = ({ title, url }) => {
+const Card_Home = ({ title, sanitizeTitle, url }) => {
   //position absolute--->overlay
   //SE PADRE è position relative
 
@@ -18,10 +18,10 @@ const Card_Home = ({ title, url }) => {
       
       --->go to SingleMovie.jsx_first line    
       */}
-      <NavLink state={{ title }} to="/singlemovie">
-        {console.log(title)}
+      <NavLink state={{ sanitizeTitle }} to="/singlemovie">
+        {console.log(sanitizeTitle)}
         <img
-          className=" img-fluid h-100 w-100 rounded border border-2 border-white "
+          className="img-overlay img-fluid h-100 w-100 rounded border border-2 border-white "
           src={url}
           id="home_img"
           alt={title}

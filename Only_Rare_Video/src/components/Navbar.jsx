@@ -6,23 +6,23 @@ import Logo from "./Logo";
 function Navbar() {
   return (
     <section>
-      <header className="p-4 d-flex align-items-center justify-content-around bg-warning ">
-        <NavLink to="/about" className="text-decoration-none">
-          About
-        </NavLink>
-        <NavLink to="/collection" className="text-decoration-none">
-          Collection
-        </NavLink>
-        <NavLink to="/" className="text-decoration-none">
-          <Logo />
-        </NavLink>
-        <NavLink to="/comingsoon" className="text-decoration-none">
-          Coming Soon
-        </NavLink>
-        <NavLink to="/offers" className="text-decoration-none">
-          Offers
-        </NavLink>
-      </header>
+      <div className="container">
+        <header className=" row p-4 bg-warning align-items-center  ">
+          <NavLink to="/about" className="col-2 text-decoration-none ">
+            About
+          </NavLink>
+          <NavLink to="/collection" className="col-2 text-decoration-none ">
+            Collection
+          </NavLink>
+          <Logo className="" />
+          <NavLink to="/comingsoon" className="col-2 text-decoration-none">
+            Coming Soon
+          </NavLink>
+          <NavLink to="/offers" className="col-2 text-decoration-none">
+            Offers
+          </NavLink>
+        </header>
+      </div>
     </section>
   );
 

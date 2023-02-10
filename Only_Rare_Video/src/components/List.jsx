@@ -6,7 +6,14 @@ const List = ({ content }) => {
     <section className="container">
       <ul className="row list-unstyled gy-4">
         {content.map((elem, index) => {
-          return <Card_Home key={index} url={elem.url} title={elem.title} />;
+          return (
+            <Card_Home
+              key={index}
+              url={elem.url}
+              title={elem.title}
+              sanitizeTitle={elem.sanitizeTitle}
+            />
+          );
         })}
       </ul>
     </section>

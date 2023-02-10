@@ -26,16 +26,20 @@ const SingleMovie = () => {
   const getMovieInfo = async () => {
     try {
       setIsLoading(true);
+      console.log(location.state.sanitizeTitle);
 
       const response = await fetch(
-        "http://localhost:8080/api/movie/title?title=" + location.state.title
+        "http://localhost:8080/api/movie/title?sanitizeTitle=" +
+          location.state.sanitizeTitle
       );
 
       if (!response.ok) {
         throw new Error("Something went wrong! Try it again!");
       }
       const data = await response.json();
-      setContent(data);
+      setContent(data[0]);
+      //[0]--->DATA IS AN ARRAY made by 1 objecy (0 is the first position)
+      console.log(data);
 
       /*
         I DO NOT USE .map because data is a single Object, not an array---> 
@@ -59,6 +63,7 @@ const SingleMovie = () => {
   // but a single object!
   if (content != null) {
     final = content;
+    console.log(final);
   }
 
   useEffect(() => {

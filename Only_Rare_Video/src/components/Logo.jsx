@@ -1,5 +1,13 @@
+import { NavLink } from "react-router-dom";
+
+NavLink;
+
 function Logo() {
-  return <h3>I'm a logo</h3>;
+  return (
+    <NavLink to="/" className="d-flex justify-content-center col-4">
+      <img className="" src="src\logo\logo-color.png" />
+    </NavLink>
+  );
 }
 
 export default Logo;

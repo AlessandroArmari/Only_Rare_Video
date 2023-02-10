@@ -33,7 +33,11 @@ function Home() {
       console.log(data);
 
       const dataMapped = data.map((elem, index) => {
-        return { title: elem.title, url: elem.image };
+        return {
+          title: elem.title,
+          sanitizeTitle: elem.sanitizeTitle,
+          url: elem.image,
+        };
       });
       console.log(dataMapped);
       setContent(dataMapped);
