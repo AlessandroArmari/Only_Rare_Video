@@ -6,19 +6,31 @@ import Logo from "./Logo";
 function Navbar() {
   return (
     <section>
-      <div className="container">
-        <header className=" row p-4 bg-warning align-items-center  ">
-          <NavLink to="/about" className="col-2 text-decoration-none ">
+      <div className="container mw-100 ">
+        <header className="row  bg-black align-items-center">
+          <NavLink
+            to="/about"
+            className="col-2 text-white text-decoration-none text-center cssFontNavbarClass"
+          >
             About
           </NavLink>
-          <NavLink to="/collection" className="col-2 text-decoration-none ">
+          <NavLink
+            to="/collection"
+            className="col-2 text-white text-decoration-none text-center cssFontNavbarClass "
+          >
             Collection
           </NavLink>
           <Logo className="" />
-          <NavLink to="/comingsoon" className="col-2 text-decoration-none">
-            Coming Soon
+          <NavLink
+            to="/comingsoon"
+            className="col-2 text-white text-decoration-none text-center cssFontNavbarClass"
+          >
+            OUT SOON
           </NavLink>
-          <NavLink to="/offers" className="col-2 text-decoration-none">
+          <NavLink
+            to="/offers"
+            className="col-2 text-white text-decoration-none text-center cssFontNavbarClass"
+          >
             Offers
           </NavLink>
         </header>

@@ -1,3 +1,5 @@
+import "./style/Home.css";
+
 //ROUTE PAGES GO IN ANOTHER FOLDER, not COMPONENT
 
 import { useEffect, useState } from "react";
@@ -70,7 +72,7 @@ function Home() {
   }, []);
 
   return (
-    <section className="bg-dark">
+    <section className="mainSectionBg">
       <Navbar></Navbar>
       <section className="mt-5">{final}</section>
       <CustomFooter />
