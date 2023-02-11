@@ -88,7 +88,7 @@ const SingleMovie = () => {
             src={final.image}
             alt=""
           />
-          <div className="ps-5 pe-5 col-7 align-self-top text-white  ">
+          <div className="ps-5 pe-5 col-6 align-self-center text-white  ">
             <div className="mb-3">Title: {final.title}</div>
             <div className="mb-3">+++ERROR+++ {final.title} </div>
             {/* ERROR */}
