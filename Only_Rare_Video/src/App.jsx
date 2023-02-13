@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Collection from "./pages/Collection";
 import ComingSoon from "./pages/ComingSoon";
 import Home from "./pages/Home";
+import { SingleCollection } from "./pages/SingleCollection";
 
 import { SingleMovie } from "./pages/SingleMovie";
 import ToBeChosen from "./pages/ToBeChosen";
@@ -22,6 +23,7 @@ function App() {
         <Route path="/comingsoon" element={<ComingSoon />} />
         <Route path="/offers" element={<ToBeChosen />} />
         <Route path="/singlemovie" element={<SingleMovie />} />
+        <Route path="/singecollection" element={<SingleCollection />} />
       </Routes>
     </>
   );

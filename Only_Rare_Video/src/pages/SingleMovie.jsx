@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { CustomFooter } from "../components/CustomFooter";
-import { Loading } from "../components/Loading";
 import Navbar from "../components/Navbar";
 
 const SingleMovie = () => {
