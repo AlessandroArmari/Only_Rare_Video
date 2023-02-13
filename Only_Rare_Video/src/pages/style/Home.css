@@ -16,6 +16,13 @@
   line-height: 36px;
 }
 
+.cssFontCollection {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  line-height: 22px;
+}
+
 .mainSectionBg {
   background-color: #222222;
 }

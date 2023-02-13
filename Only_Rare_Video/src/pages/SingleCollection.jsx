@@ -22,7 +22,6 @@ const SingleCollection = () => {
       );
 
       const data = await response.json();
-      console.log(data);
       setContent(data);
     } catch (error) {
       setError(error);
@@ -39,15 +38,18 @@ const SingleCollection = () => {
   }
 
   if (content != null) {
+    //here I print collection info
     final = content;
 
-    content.movies.map((elem, index) => {
+    //here I print movies info
+    finalMovies = content.movies.map((elem, index) => {
       return (
         <Card_Collection
           key={index}
           title={elem.title}
           genre={elem.genre}
           url={elem.image}
+          director={elem.director.fullName}
         />
       ); //CONTINUE HERE
     });
@@ -62,14 +64,17 @@ const SingleCollection = () => {
   return (
     <section className="mainSectionBg ">
       <Navbar />
-      <section className="mt-5 text-light cssFontTextMontserrat">
+      <section className="mt-5 text-light cssFontNavbarClass">
         {final.collectionName}
       </section>
       <div className="text-light cssFontTextMontserrat">
         {final.collectionDescription}
       </div>
-      <div className="text-light cssFontTextMontserrat">{}</div>
-      {/*ERROR HERE */}
+      <div className="container  text-light cssFontTextMontserrat">
+        <div className="row mt-5 gy-3 justify-content-center">
+          {finalMovies}
+        </div>
+      </div>
       <CustomFooter />
     </section>
   );
