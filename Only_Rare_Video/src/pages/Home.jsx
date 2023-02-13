@@ -19,11 +19,11 @@ function Home() {
   const [isLoading, setIsLoading] = useState(false);
 
   const fetchGetAll = async () => {
-    setIsLoading(true);
-
     console.log("I start when page loads");
 
     try {
+      setIsLoading(true);
+
       const response = await fetch("http://localhost:8080/api/movie/all");
 
       if (!response.ok) {
@@ -34,7 +34,7 @@ function Home() {
       const data = await response.json();
       console.log(data);
 
-      const dataMapped = data.map((elem, index) => {
+      const dataMapped = await data.map((elem, index) => {
         return {
           title: elem.title,
           sanitizeTitle: elem.sanitizeTitle,

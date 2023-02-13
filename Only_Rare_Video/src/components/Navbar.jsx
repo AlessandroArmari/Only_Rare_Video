@@ -18,7 +18,7 @@ function Navbar() {
             to="/collection"
             className="col-2 text-white text-decoration-none text-center cssFontNavbarClass "
           >
-            Collection
+            Offers
           </NavLink>
           <Logo className="" />
           <NavLink
@@ -31,7 +31,7 @@ function Navbar() {
             to="/offers"
             className="col-2 text-white text-decoration-none text-center cssFontNavbarClass"
           >
-            Offers
+            to-be-chosen
           </NavLink>
         </header>
       </div>
