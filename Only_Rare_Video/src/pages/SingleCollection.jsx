@@ -11,7 +11,7 @@ const SingleCollection = () => {
   const location = useLocation();
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [content, setContent] = useState();
+  const [content, setContent] = useState(null);
 
   const fetchGetSingleCollection = async () => {
     try {
@@ -41,9 +41,10 @@ const SingleCollection = () => {
   if (content != null) {
     final = content;
 
-    finalMovies = content.movies.map((elem, index) => {
+    content.movies.map((elem, index) => {
       return (
         <Card_Collection
+          key={index}
           title={elem.title}
           genre={elem.genre}
           url={elem.image}
@@ -67,7 +68,7 @@ const SingleCollection = () => {
       <div className="text-light cssFontTextMontserrat">
         {final.collectionDescription}
       </div>
-      <div className="text-light cssFontTextMontserrat">{finalMovies}</div>
+      <div className="text-light cssFontTextMontserrat">{}</div>
       {/*ERROR HERE */}
       <CustomFooter />
     </section>
