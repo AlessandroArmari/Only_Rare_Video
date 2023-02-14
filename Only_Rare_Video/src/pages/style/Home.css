@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
 .cssFontNavbarClass {
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
@@ -11,6 +12,7 @@
 }
 
 .cssFontTextMontserrat {
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 370;
   font-style: normal;
@@ -18,6 +20,7 @@
 }
 
 .cssFontCollectionTitle {
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -25,6 +28,7 @@
 }
 
 .cssFontCollectionDirector {
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 85%;
   font-style: italic;

@@ -53,8 +53,9 @@ const SingleCollection = () => {
           director={elem.director.fullName}
           sanitizeTitle={elem.sanitizeTitle}
         />
-      ); //CONTINUE HERE
+      ); 
     });
+    console.log(finalMovies);
   }
 
   useEffect(() => {

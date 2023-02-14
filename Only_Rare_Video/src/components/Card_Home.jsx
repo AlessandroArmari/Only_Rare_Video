@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./style/Card_Home.css";
 
-const Card_Home = ({ title, sanitizeTitle, url, genre }) => {
+const Card_Home = ({ title, sanitizeTitle, url, genre, plot }) => {
   //position absolute--->overlay
   //SE PADRE è position relative
 
