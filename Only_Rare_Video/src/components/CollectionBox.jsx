@@ -2,15 +2,15 @@ import { NavLink } from "react-router-dom";
 
 function CollectionBox({ content }) {
   return (
-    <section className="container p-2 m-5 text-light  rounded cssFontTextMontserrat">
-      <section className="row g-5">
+    <section className="container p-2  text-light  rounded cssFontTextMontserrat">
+      <section className="row gx-2 border border-2 border-white rounded">
         <img
-          className="col-4 p-1 mr-3 border border-2 border-white rounded"
+          className="col-3 p-1 mr-3 img-fluid h-50 w-50  "
           src={content.collectionImage}
           alt=""
         />
-        <div className="col-8 d-flex flex-column justify-content-around ">
-          <header className="cssFontNavbarClass mt-1 mb-3">
+        <div className="col-6 d-flex flex-column justify-content-around ">
+          <header className="cssFontNavbarClass ">
             {content.collectionName}
           </header>
           <div className="">{content.collectionDescription}</div>

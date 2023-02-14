@@ -83,7 +83,7 @@ const SingleMovie = () => {
           {isLoading && final}
 
           <img
-            className="col-4 p-0 ms-4 img-fluid rounded border border-2 border-white "
+            className="col-4 p-0 ms-4 img-fluid w-25 h-25 rounded border border-2 border-white "
             src={final.image}
             alt=""
           />

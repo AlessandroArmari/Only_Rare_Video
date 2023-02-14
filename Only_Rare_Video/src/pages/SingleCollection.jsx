@@ -23,6 +23,7 @@ const SingleCollection = () => {
 
       const data = await response.json();
       setContent(data);
+      console.log(data);
     } catch (error) {
       setError(error);
       console.log(error);
@@ -50,6 +51,7 @@ const SingleCollection = () => {
           genre={elem.genre}
           url={elem.image}
           director={elem.director.fullName}
+          sanitizeTitle={elem.sanitizeTitle}
         />
       ); //CONTINUE HERE
     });
@@ -64,14 +66,16 @@ const SingleCollection = () => {
   return (
     <section className="mainSectionBg ">
       <Navbar />
-      <section className="mt-5 text-light cssFontNavbarClass">
-        {final.collectionName}
-      </section>
-      <div className="text-light cssFontTextMontserrat">
-        {final.collectionDescription}
+      <div className="d-flex flex-column align-items-center  mx-4">
+        <div className="mt-4 text-center text-light cssFontNavbarClass">
+          {final.collectionName}
+        </div>
+        <div className="mt-2 mx-5 text-center text-light cssFontTextMontserrat">
+          {final.longCollectionDescription}
+        </div>
       </div>
       <div className="container  text-light cssFontTextMontserrat">
-        <div className="row mt-5 gy-3 justify-content-center">
+        <div className="row mt-3 gy-3 justify-content-center">
           {finalMovies}
         </div>
       </div>
