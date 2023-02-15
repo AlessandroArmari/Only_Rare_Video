@@ -73,7 +73,7 @@ function ComingSoon() {
       <h2 className="m-5 text-center cssFontNavbarClass">
         New stuff coming Soon...
       </h2>
-      <section className="container">
+      <section className="container mb-5">
         <section className="row g-5 ">{final}</section>
       </section>
       <CustomFooter />

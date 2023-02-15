@@ -40,9 +40,19 @@ function Home() {
           sanitizeTitle: elem.sanitizeTitle,
           url: elem.image,
           genre: elem.genre,
+          comingSoon: elem.comingSoon,
         };
       });
       console.log(dataMapped);
+
+      // ---> .filter() ---> here I exclude movies wich have boolean ComingSoon:true
+
+      const dataFiltered = await dataMapped.filter(
+        (elem) => elem.comingSoon == false
+      );
+
+      console.log(dataFiltered);
+
       setContent(dataMapped);
       console.log(content); //Here I AM NOT FILLED!
     } catch (error) {
@@ -75,7 +85,7 @@ function Home() {
   return (
     <section className="mainSectionBg">
       <Navbar></Navbar>
-      <section className="mt-5">{final}</section>
+      <section className="mt-5 mb-5">{final}</section>
       <CustomFooter />
     </section>
   );

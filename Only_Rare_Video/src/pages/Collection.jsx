@@ -76,7 +76,7 @@ function Collection() {
   return (
     <section className="mainSectionBg">
       <Navbar />
-      <section className="d-flex flex-column justify-content-center">
+      <section className="m-5 d-flex flex-column justify-content-center">
         {final}
       </section>
       <CustomFooter />
