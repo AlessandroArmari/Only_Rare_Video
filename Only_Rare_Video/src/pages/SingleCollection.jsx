@@ -38,6 +38,10 @@ const SingleCollection = () => {
     final = <Loading />;
   }
 
+  if (error) {
+    final = <Error />;
+  }
+
   if (content != null) {
     //here I print collection info
     final = content;
@@ -53,7 +57,7 @@ const SingleCollection = () => {
           director={elem.director.fullName}
           sanitizeTitle={elem.sanitizeTitle}
         />
-      ); 
+      );
     });
     console.log(finalMovies);
   }

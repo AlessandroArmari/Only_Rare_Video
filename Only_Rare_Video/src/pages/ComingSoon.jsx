@@ -43,6 +43,7 @@ function ComingSoon() {
   }, []);
 
   let final = "";
+  let finalError = "";
 
   if (isLoading == true) {
     final = <Loading />;
@@ -70,11 +71,12 @@ function ComingSoon() {
   return (
     <section className="mainSectionBg">
       <Navbar />
-      <h2 className="m-5 text-center cssFontNavbarClass">
-        New stuff coming Soon...
-      </h2>
-      <section className="container mb-5">
-        <section className="row g-5 ">{final}</section>
+
+      <section className="mb-5">
+        <h2 className="m-5 text-center cssFontNavbarClass">
+          New stuff coming Soon...
+        </h2>
+        <section className="text-center row g-5 m-5">{final}</section>
       </section>
       <CustomFooter />
     </section>

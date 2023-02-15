@@ -20,12 +20,23 @@
   line-height: 36px;
 }
 
+.cssFontTitleSingleMovie {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 36px;
+  font-size: 200%;
+  text-transform: uppercase;
+}
+
 .cssFontCollectionTitle {
   color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
   line-height: 22px;
+  font-size: 50%;
 }
 
 .cssFontCollectionDirector {

@@ -34,12 +34,18 @@ function Collection() {
           collectionDescription: elem.collectionDescription,
           collectionImage: elem.collectionImage,
           movies: elem.movies,
+          comingSoon: elem.comingSoon,
         };
       });
-
       console.log(dataMapped);
 
-      setContent(dataMapped);
+      //Filtering the collection I want disaplyed!
+
+      const dataFiltered = dataMapped.filter(
+        (elem) => elem.comingSoon == false
+      );
+
+      setContent(dataFiltered);
       console.log(content);
     } catch (error) {
       setError(error);

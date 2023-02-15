@@ -70,32 +70,43 @@ const SingleMovie = () => {
 
     //important: THIS RETURN inside useEffect()---> it activates
     //when function is "dismounted"--->ex. when I refresh or Close the page
-    return () => {
-      console.log("EVENT ON DISMOUT ");
-    };
+    // return () => {
+    //   console.log("EVENT ON DISMOUT ");
+    // };
   }, []);
 
   return (
     <section className="bg-dark">
       <Navbar></Navbar>
       <section className="container">
-        <section className="row mt-5 justify-content-between">
+        <section className="row mt-5 justify-content-between gx-5 ">
           {isLoading && final}
 
           <img
-            className="col-4 p-0 ms-4 img-fluid w-25 h-25 rounded border border-2 border-white "
+            className="col-4 p-0 img-fluid rounded  border border-2 border-white "
             src={final.image}
             alt=""
           />
-          <div className="ps-5 pe-5 col-6 align-self-center text-white  ">
-            <div className="mb-3">Title: {final.title}</div>
-            <div className="mb-3">+++ERROR+++ {final.title} </div>
-            {/* ERROR */}
-            <div className="mb-3">Year: {final.year}</div>
-            <div className="mb-3">Running time: {final.running_time} min.</div>
-            <div className="mb-3">Genre: {final.genre}</div>
-            <div className="mb-3">Plot: {final.plot}</div>
+          <div className="d-flex flex-column col-7 justify-content-around ps-5 pe-5  text-white  ">
+            <div>
+              <div className="mb-3 cssFontTitleSingleMovie">{final.title}</div>
+              <div className="mb-3">+++ERROR+++ {final.title} </div>
+              {/* ERROR */}
+              <div className="mb-3">Year: {final.year}</div>
+              <div className="mb-3">
+                Running time: {final.running_time} min.
+              </div>
+              <div className="mb-3">Genre: {final.genre}</div>
+              <div className="mb-3">Plot: {final.plot}</div>
+            </div>
             {/* HERE I'M POINTING THE full property in the object director in the object final */}
+            <div className="container">
+              <div className="row justify-content-center ">
+                <img className="col-3 " src="src\logo\bluray.png" alt="" />
+                <img className="col-3" src="src\logo\dvd.png" alt="" />
+                <img className="col-3" src="src\logo\prime_video.png" alt="" />
+              </div>
+            </div>
           </div>
         </section>
       </section>

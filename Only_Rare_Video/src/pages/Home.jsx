@@ -53,7 +53,7 @@ function Home() {
 
       console.log(dataFiltered);
 
-      setContent(dataMapped);
+      setContent(dataFiltered);
       console.log(content); //Here I AM NOT FILLED!
     } catch (error) {
       setError(error);

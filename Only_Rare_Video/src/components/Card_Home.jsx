@@ -19,7 +19,6 @@ const Card_Home = ({ title, sanitizeTitle, url, genre, plot }) => {
       --->go to SingleMovie.jsx_first line    
       */}
       <NavLink state={{ sanitizeTitle }} to="/singlemovie">
-        {console.log(sanitizeTitle)}
         <img
           className="img-overlay img-fluid h-100 w-100 rounded border border-2 border-white "
           src={url}

@@ -3,14 +3,17 @@ import Logo from "./Logo";
 
 //We use "NavLink" insted of "Link" to create Link to other pages
 //For NavLink to=""  is mandatory--->I will have a link in App.jsx
+
+//className="sticky-top"---> to fix navbar
+
 function Navbar() {
   return (
-    <section>
-      <div className="container mw-100 ">
-        <header className="row  bg-black align-items-center">
+    <section className="sticky-top">
+      <div className=" container mw-100 ">
+        <header className="row bg-black align-items-center">
           <NavLink
             to="/about"
-            className="col-2 text-white text-decoration-none text-center cssFontNavbarClass"
+            className="col-3 text-white text-decoration-none text-center cssFontNavbarClass"
           >
             About
           </NavLink>
@@ -29,7 +32,7 @@ function Navbar() {
           </NavLink>
           <NavLink
             to="/offers"
-            className="col-2 text-white text-decoration-none text-center cssFontNavbarClass"
+            className="col-3 text-white text-decoration-none text-center cssFontNavbarClass"
           >
             to-be-chosen
           </NavLink>

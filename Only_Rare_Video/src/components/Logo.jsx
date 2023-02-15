@@ -4,9 +4,9 @@ NavLink;
 
 function Logo() {
   return (
-    <div className="col-4 p-0 d-flex justify-content-center ">
+    <div className="col-2 d-flex justify-content-center ">
       <NavLink to="/">
-        <img className="" src="src\logo\130x130.png" />
+        <img className="img-fluid" src="src\logo\120x95.png" />
       </NavLink>
     </div>
   );
