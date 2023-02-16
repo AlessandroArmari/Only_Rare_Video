@@ -11,7 +11,16 @@
   transition: 1s;
   filter: brightness(200%);
   filter: contrast(200%);
-  /* filter: drop-shadow(8px 8px 10px red);
-  filter: invert(100%);*/
+
   filter: saturate(300%);
+}
+
+.navLinkHover:hover {
+  transition: 1s;
+  color: red;
+}
+
+.navLinkHover {
+  transition: 1s;
+  color: white;
 }

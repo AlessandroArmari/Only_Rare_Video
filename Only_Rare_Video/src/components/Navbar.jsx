@@ -13,28 +13,28 @@ function Navbar() {
         <header className="row bg-black align-items-center">
           <NavLink
             to="/about"
-            className="col-3 text-white text-decoration-none text-center cssFontNavbarClass"
+            className="col-3 text-white text-decoration-none text-center cssFontNavbarClass "
           >
-            About
+            <div className="navLinkHover">About</div>
           </NavLink>
           <NavLink
             to="/collection"
             className="col-2 text-white text-decoration-none text-center cssFontNavbarClass "
           >
-            Offers
+            <div className="navLinkHover">Collection</div>
           </NavLink>
           <Logo className="" />
           <NavLink
             to="/comingsoon"
             className="col-2 text-white text-decoration-none text-center cssFontNavbarClass"
           >
-            OUT SOON
+            <div className="navLinkHover">Out Soon</div>
           </NavLink>
           <NavLink
             to="/offers"
             className="col-3 text-white text-decoration-none text-center cssFontNavbarClass"
           >
-            to-be-chosen
+            <div className="navLinkHover">Carrello</div>
           </NavLink>
         </header>
       </div>

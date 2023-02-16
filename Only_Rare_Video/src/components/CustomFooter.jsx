@@ -6,11 +6,30 @@ const CustomFooter = () => {
   return (
     <div className=" mt-4 container mw-100 ">
       <section className="row bg-black align-items-center">
-        <div className="pt-2 pb-2 col-6 text-white text-decoration-none text-center cssFontFooter">
+        <div className="col-6 pt-2 pb-2  text-white text-decoration-none text-center cssFontFooter">
           All rights reserved © 2023 Only Rare Video
         </div>
-        <div className="col-6 text-white text-decoration-none text-center cssFontFooter ">
-          Follow us on:
+        <div className="col-6 px-5 d-flex justify-content-end align-items-center">
+          <div className="text-white text-decoration-none text-center cssFontFooter ">
+            Follow us on:
+          </div>
+          <div className="d-flex ">
+            <img
+              className="img-fluid p-1 px-2 "
+              src="src\logo\facebook_icon.png"
+              alt="facebook"
+            />
+            <img
+              className="img-fluid p-1  px-2"
+              src="src\logo\instagram_icon.png"
+              alt=""
+            />
+            <img
+              className="img-fluid p-1 px-2"
+              src="src\logo\twitter_icon.png"
+              alt=""
+            />
+          </div>
         </div>
       </section>
     </div>
