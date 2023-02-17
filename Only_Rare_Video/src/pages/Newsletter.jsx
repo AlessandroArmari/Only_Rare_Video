@@ -5,10 +5,11 @@ import Navbar from "../components/Navbar";
 
 function Newsletter() {
   const [emailValue, setEmailValue] = useState("");
-
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [emailSentCorrectly, setEmailSentCorrectly] = useState(false);
+  const [emailSentInvalid, setEmailSentInvalid] = useState("");
+  const [inputFieldDisabled, setInputFieldDisabled] = useState("");
   const [content, setContent] = useState(null);
 
   const emailValueHandler = (event) => {
@@ -18,6 +19,18 @@ function Newsletter() {
 
   const submitHandler = (event) => {
     event.preventDefault();
+
+    setEmailSentInvalid(false);
+
+    //Regex ---> check email when press button
+    const emailRegex = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+    if (emailRegex.test(emailValue) != true) {
+      console.log("invalid email");
+      setEmailSentInvalid(true);
+      setEmailValue("");
+      return;
+    }
+
     setIsLoading(true);
 
     //Create Object
@@ -40,6 +53,8 @@ function Newsletter() {
       })
       .then(() => {
         setEmailSentCorrectly(true);
+        setInputFieldDisabled("disabled");
+        setEmailValue("");
       })
       .catch((error) => {
         setError(error);
@@ -53,9 +68,15 @@ function Newsletter() {
     final = <Loading />;
   }
 
+  if (emailSentInvalid) {
+    final = (
+      <div className="cssFontError mt-4">Invalid email! Try it again!</div>
+    );
+  }
+
   if (emailSentCorrectly) {
     final = (
-      <div className="cssFontNavbarClass mt-4">
+      <div className="cssFontNavbarClass mt-4 text-center">
         You've been succesfully subscribed to our newsletter!
       </div>
     );
@@ -66,6 +87,8 @@ function Newsletter() {
   if (error != null) {
     final = <div> ERRORE </div>;
   }
+
+  let inputStyle = "";
 
   return (
     <section className="mainSectionBg">
@@ -95,14 +118,24 @@ function Newsletter() {
               Email:
             </label>
             <input
-              className="form-control bg-light"
+              className={
+                inputFieldDisabled == ""
+                  ? "form-control bg-light"
+                  : "form-control bg-secondary"
+              }
               value={emailValue}
               onChange={emailValueHandler}
-              type="email"
+              type="text"
               name="email"
               id="email"
+              disabled={inputFieldDisabled}
             />
-            {!emailSentCorrectly && <button className="mx-3 p-1">Send</button>}
+            <button
+              className="btn-sm mx-3  rounded"
+              disabled={inputFieldDisabled}
+            >
+              Send
+            </button>
           </div>
           {final}
         </section>
