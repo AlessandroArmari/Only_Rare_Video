@@ -2,8 +2,8 @@ import { NavLink } from "react-router-dom";
 
 function CollectionBox({ content }) {
   return (
-    <section className="container p-4  text-light  rounded cssFontTextMontserrat">
-      <section className="row align-items-center gx-2 rounded collectionBackGround">
+    <section className="container p-4  text-light  rounded cssFontTextMontserrat ">
+      <section className="row align-items-center gx-2 rounded collectionBackGround border border-light border-5">
         <img
           className="col-3 p-2 mr-3 img-fluid h-50 w-50 rounded"
           src={content.collectionImage}

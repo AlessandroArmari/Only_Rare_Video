@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CustomFooter } from "../components/CustomFooter";
 import { Loading } from "../components/Loading";
+import { Error } from "../components/Error";
 import Navbar from "../components/Navbar";
 
 function Newsletter() {
@@ -19,6 +20,10 @@ function Newsletter() {
 
   const submitHandler = (event) => {
     event.preventDefault();
+
+    if (error != null) {
+      setError(null);
+    }
 
     setEmailSentInvalid(false);
 
@@ -46,16 +51,20 @@ function Newsletter() {
       },
       body: JSON.stringify(newEmail),
     })
-      //.then((response) => response.json()) to be checked!
+      //ERRORE QUI
+      
+      //.then((response) => response.json())
       .then((newEmail) => {
-        setIsLoading(false);
         console.log("Success", newEmail);
       })
+      //prova con errore 406
       .then(() => {
+        setIsLoading(false);
         setEmailSentCorrectly(true);
         setInputFieldDisabled("disabled");
         setEmailValue("");
       })
+      //NON CAPISCO COME FUNZIONA CATCH
       .catch((error) => {
         setError(error);
         console.error("Error", error);
@@ -84,11 +93,9 @@ function Newsletter() {
 
   //errore da correggere
 
-  if (error != null) {
-    final = <div> ERRORE </div>;
+  if (error) {
+    final = <Error />;
   }
-
-  let inputStyle = "";
 
   return (
     <section className="mainSectionBg">
