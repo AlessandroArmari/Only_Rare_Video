@@ -11,8 +11,10 @@ const Card_Collection = ({ title, genre, url, director, sanitizeTitle }) => {
         />
       </NavLink>
 
-      <div className="mt-1 cssFontCollectionTitle">{title}</div>
-      <div className="mt-2 cssFontCollectionDirector">{director}</div>
+      <div className="mt-1 cssFontCollectionTitle text-center">{title} </div>
+      <div className="mt-2 cssFontCollectionDirector  text-center">
+        by {director}
+      </div>
     </section>
   );
 };
