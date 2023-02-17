@@ -7,7 +7,7 @@ import Home from "./pages/Home";
 import { SingleCollection } from "./pages/SingleCollection";
 
 import { SingleMovie } from "./pages/SingleMovie";
-import ToBeChosen from "./pages/ToBeChosen";
+import ToBeChosen from "./pages/Newsletter";
 
 // +++REMEMBER--->BROWSER ROUTE IN MAIN.JSX+++
 
@@ -21,7 +21,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/comingsoon" element={<ComingSoon />} />
-        <Route path="/offers" element={<ToBeChosen />} />
+        <Route path="/newsletter" element={<ToBeChosen />} />
         <Route path="/singlemovie" element={<SingleMovie />} />
         <Route path="/singecollection" element={<SingleCollection />} />
       </Routes>

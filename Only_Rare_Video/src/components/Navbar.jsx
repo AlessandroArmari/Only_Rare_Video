@@ -31,10 +31,10 @@ function Navbar() {
             <div className="navLinkHover">Out Soon</div>
           </NavLink>
           <NavLink
-            to="/offers"
+            to="/newsletter"
             className="col-3 text-white text-decoration-none text-center cssFontNavbarClass"
           >
-            <div className="navLinkHover">Carrello</div>
+            <div className="navLinkHover">Newsletter</div>
           </NavLink>
         </header>
       </div>

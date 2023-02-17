@@ -23,6 +23,9 @@ const SingleMovie = () => {
   // CONTROLLA
 
   const getMovieInfo = async () => {
+    //use effect ---> controlla lezioni
+    //---> aggiungi .then
+
     try {
       setIsLoading(true);
       console.log(location.state.sanitizeTitle);
@@ -35,6 +38,7 @@ const SingleMovie = () => {
       if (!response.ok) {
         throw new Error("Something went wrong! Try it again!");
       }
+      
       const data = await response.json();
       setContent(data[0]);
       //[0]--->DATA IS AN ARRAY made by 1 objecy (0 is the first position)
