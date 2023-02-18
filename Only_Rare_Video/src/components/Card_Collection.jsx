@@ -5,7 +5,7 @@ const Card_Collection = ({ title, genre, url, director, sanitizeTitle }) => {
     <section className="col-2 p-2 mx-2 ">
       <NavLink state={{ sanitizeTitle }} to="/singlemovie">
         <img
-          className="img-overlay img-fluid h-75 w-100 rounded "
+          className="img-overlay img-fluid h-75 w-100 rounded"
           src={url}
           alt={title}
         />

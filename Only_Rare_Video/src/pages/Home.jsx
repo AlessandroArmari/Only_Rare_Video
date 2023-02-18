@@ -83,7 +83,7 @@ function Home() {
   }, []);
 
   return (
-    <section className="mainSectionBg">
+    <section className="mainSectionBg ">
       <Navbar></Navbar>
       <section className="mt-5 mb-5">{final}</section>
       <CustomFooter />

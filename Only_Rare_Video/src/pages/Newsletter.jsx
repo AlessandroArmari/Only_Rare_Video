@@ -52,8 +52,8 @@ function Newsletter() {
       body: JSON.stringify(newEmail),
     })
       //ERRORE QUI
-      
-      //.then((response) => response.json())
+
+      //.then((response) => response.json())    --->NOT MANDATORY!
       .then((newEmail) => {
         console.log("Success", newEmail);
       })
@@ -106,21 +106,21 @@ function Newsletter() {
         action=""
       >
         <section className="d-flex flex-column  my-5 align-items-center">
-          <div>
-            <h1 className="text-center mb-4">
+          <div className="">
+            <h1 className="mt-4 text-center mb-4">
               Subscribe to Only Rare Video Newsletter
             </h1>
-            <div className="text-center">
+            <div className="mt-5 text-center">
               Don't miss a single movie coming out!
             </div>
-            <div className="text-center">
+            <div className=" text-center">
               You will be granted thousands of discount and deals
             </div>
             <div className="text-center">
               Join the covenant and never come back, alive...
             </div>
           </div>
-          <div className="d-flex mt-5   align-items-center ">
+          <div className="d-flex mt-5 align-items-center ">
             <label className="px-3" htmlFor="email">
               Email:
             </label>
@@ -147,6 +147,7 @@ function Newsletter() {
           {final}
         </section>
       </form>
+
       <CustomFooter />
     </section>
   );

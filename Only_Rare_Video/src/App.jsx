@@ -5,9 +5,9 @@ import Collection from "./pages/Collection";
 import ComingSoon from "./pages/ComingSoon";
 import Home from "./pages/Home";
 import { SingleCollection } from "./pages/SingleCollection";
-
 import { SingleMovie } from "./pages/SingleMovie";
 import ToBeChosen from "./pages/Newsletter";
+import Navbar from "./components/Navbar";
 
 // +++REMEMBER--->BROWSER ROUTE IN MAIN.JSX+++
 
@@ -18,7 +18,17 @@ function App() {
     <>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+
+        {/* USING OUTLET 
+        when I go to /about--->re-render Navbar+children--->About
+
+        Go to Navbar class and search for <Outlet>
+        */}
+        <Route
+          element={<Navbar />}
+          children={<Route path="/about" element={<About />} />}
+        />
+
         <Route path="/collection" element={<Collection />} />
         <Route path="/comingsoon" element={<ComingSoon />} />
         <Route path="/newsletter" element={<ToBeChosen />} />

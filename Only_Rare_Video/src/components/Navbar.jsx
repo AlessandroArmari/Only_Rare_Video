@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Logo from "./Logo";
 
 //We use "NavLink" insted of "Link" to create Link to other pages
@@ -9,7 +9,7 @@ import Logo from "./Logo";
 function Navbar() {
   return (
     <section className="sticky-top">
-      <div className=" container mw-100 ">
+      <div className=" container mw-100 mainSectionBg ">
         <header className="row bg-black align-items-center">
           <NavLink
             to="/about"
@@ -37,6 +37,12 @@ function Navbar() {
             <div className="navLinkHover">Newsletter</div>
           </NavLink>
         </header>
+
+        {/* In outlet you will have component about */}
+
+        <div>
+          <Outlet />
+        </div>
       </div>
     </section>
   );
