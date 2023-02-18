@@ -10,6 +10,7 @@ function Newsletter() {
   const [error, setError] = useState(null);
   const [emailSentCorrectly, setEmailSentCorrectly] = useState(false);
   const [emailSentInvalid, setEmailSentInvalid] = useState("");
+  const [emailAlreadyExists, setEmailAlreadyExists] = useState();
   const [inputFieldDisabled, setInputFieldDisabled] = useState("");
   const [content, setContent] = useState(null);
 
@@ -51,14 +52,17 @@ function Newsletter() {
       },
       body: JSON.stringify(newEmail),
     })
-      //ERRORE QUI
+      //.then((response) => response.json())    --->NOT MANDATORY IN THIS CASE!
 
-      //.then((response) => response.json())    --->NOT MANDATORY!
-      .then((newEmail) => {
-        console.log("Success", newEmail);
-      })
       //prova con errore 406
-      .then(() => {
+      .then((response, error) => {
+        if (!response.ok) {
+          setEmailAlreadyExists(true);
+          setEmailValue("");
+          return;
+        }
+        console.log(response);
+        console.log(error);
         setIsLoading(false);
         setEmailSentCorrectly(true);
         setInputFieldDisabled("disabled");
@@ -69,6 +73,7 @@ function Newsletter() {
         setError(error);
         console.error("Error", error);
       });
+    console.log("I come before the .thens()");
   };
 
   let final = "";
@@ -87,6 +92,14 @@ function Newsletter() {
     final = (
       <div className="cssFontNavbarClass mt-4 text-center">
         You've been succesfully subscribed to our newsletter!
+      </div>
+    );
+  }
+
+  if (emailAlreadyExists) {
+    final = (
+      <div className="cssFontNavbarClass mt-4 text-center">
+        Ts ema aread exsts
       </div>
     );
   }
