@@ -8,6 +8,7 @@ import { SingleCollection } from "./pages/SingleCollection";
 import { SingleMovie } from "./pages/SingleMovie";
 import ToBeChosen from "./pages/Newsletter";
 import Navbar from "./components/Navbar";
+import { NavbarNEW } from "./components/NavbarNEW";
 
 // +++REMEMBER--->BROWSER ROUTE IN MAIN.JSX+++
 
@@ -25,7 +26,7 @@ function App() {
         Go to Navbar class and search for <Outlet>
         */}
         <Route
-          element={<Navbar />}
+          element={<NavbarNEW />}
           children={<Route path="/about" element={<About />} />}
         />
 

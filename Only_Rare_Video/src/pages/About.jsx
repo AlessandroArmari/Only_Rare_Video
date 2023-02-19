@@ -4,13 +4,13 @@ import { Outlet } from "react-router-dom";
 
 function About() {
   return (
-    <section className="mainSectionBg">
+    <section className="mainSectionBg ">
       {/* <Navbar></Navbar> 
         ---I DO NOT RENDER NAVBAR DIRECTLY BUT I USED OUTLET
         GO TO APP.JSX
       */}
 
-      <section className="mt-5 mx-5">
+      <section className="pt-5 mx-5 ">
         <h1 className="text-center cssFontNavbarClass ">ABOUT US</h1>
         <div className="mt-5 mb-5 text-center cssFontTextMontserrat ">
           Only Rare Video is a leading independent entertainment distribution

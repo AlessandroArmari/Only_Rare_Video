@@ -1,7 +1,8 @@
 import "./style/Home.css";
 
 import { CollectionBox } from "../components/CollectionBox.jsx";
-import Navbar from "../components/Navbar";
+import { NavbarNEW } from "../components/NavbarNEW";
+
 import { CustomFooter } from "../components/CustomFooter";
 import { useEffect, useState } from "react";
 import { Loading } from "../components/Loading";
@@ -81,7 +82,7 @@ function Collection() {
 
   return (
     <section className="mainSectionBg">
-      <Navbar />
+      <NavbarNEW />
       <section className="m-5 d-flex flex-column justify-content-center">
         {final}
       </section>

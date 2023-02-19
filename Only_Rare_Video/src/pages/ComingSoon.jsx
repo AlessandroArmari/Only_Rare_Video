@@ -4,7 +4,7 @@ import { CustomFooter } from "../components/CustomFooter";
 import { Error } from "../components/Error";
 import { Loading } from "../components/Loading";
 
-import Navbar from "../components/Navbar";
+import { NavbarNEW } from "../components/NavbarNEW";
 
 function ComingSoon() {
   const [error, setError] = useState(null);
@@ -38,11 +38,9 @@ function ComingSoon() {
     setIsLoading(false);
   }
 
-  /*   PROVO LOADER  
   useEffect(() => {
     fetchComingSoon();
   }, []);
-  */
 
   let final = "";
   let finalError = "";
@@ -72,7 +70,7 @@ function ComingSoon() {
 
   return (
     <section className="mainSectionBg">
-      <Navbar />
+      <NavbarNEW></NavbarNEW>
 
       <section className="mb-5">
         <h2 className="m-5 text-center cssFontNavbarClass">

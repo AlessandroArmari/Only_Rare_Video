@@ -9,6 +9,7 @@ import { Error } from "../components/Error";
 import { List } from "../components/List";
 import { Loading } from "../components/Loading";
 import Navbar from "../components/Navbar";
+import { NavbarNEW } from "../components/NavbarNEW";
 
 function Home() {
   //I use useEffect to start fetchGetAll() once Home is launched
@@ -84,7 +85,7 @@ function Home() {
 
   return (
     <section className="mainSectionBg ">
-      <Navbar></Navbar>
+      <NavbarNEW />
       <section className="mt-5 mb-5">{final}</section>
       <CustomFooter />
     </section>

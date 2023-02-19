@@ -3,6 +3,7 @@ import { CustomFooter } from "../components/CustomFooter";
 import { Loading } from "../components/Loading";
 import { Error } from "../components/Error";
 import Navbar from "../components/Navbar";
+import { NavbarNEW } from "../components/NavbarNEW";
 
 function Newsletter() {
   const [emailValue, setEmailValue] = useState("");
@@ -115,7 +116,8 @@ function Newsletter() {
 
   return (
     <section className="mainSectionBg">
-      <Navbar></Navbar>
+      <NavbarNEW></NavbarNEW>
+
       <form
         onSubmit={submitHandler}
         className="cssFontTextMontserrat"

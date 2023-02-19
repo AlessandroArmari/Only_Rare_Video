@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { CustomFooter } from "../components/CustomFooter";
+import { Loading } from "../components/Loading";
 import Navbar from "../components/Navbar";
 
 const SingleMovie = () => {
@@ -28,6 +29,7 @@ const SingleMovie = () => {
 
     try {
       setIsLoading(true);
+      console.log(location.state);
       console.log(location.state.sanitizeTitle);
 
       const response = await fetch(
@@ -38,7 +40,7 @@ const SingleMovie = () => {
       if (!response.ok) {
         throw new Error("Something went wrong! Try it again!");
       }
-      
+
       const data = await response.json();
       setContent(data[0]);
       //[0]--->DATA IS AN ARRAY made by 1 objecy (0 is the first position)
@@ -57,15 +59,20 @@ const SingleMovie = () => {
   };
 
   let final = "";
+  let finalDirector = "";
 
   if (isLoading) {
-    final = <div> I'm Loading </div>;
+    final = <Loading />;
   }
 
   //I do not use content.length because my content isn't an array
   // but a single object!
   if (content != null) {
     final = content;
+    finalDirector = content.director;
+    //Using this finalDirector because I cannot re-render a
+    //property of an object which is already a property of an object
+    //---> go in "return" when I re-render Director Name
     console.log(final);
   }
 
@@ -82,20 +89,19 @@ const SingleMovie = () => {
   return (
     <section className="bg-dark">
       <Navbar></Navbar>
-      <section className="container">
+      <section className="container mb-5">
         <section className="row mt-5 justify-content-between gx-5 ">
           {isLoading && final}
 
           <img
-            className="col-4 p-0 img-fluid rounded  border border-2 border-white "
+            className="col-4 p-0 img-fluid h-100 rounded  border border-2 border-white "
             src={final.image}
             alt=""
           />
           <div className="d-flex flex-column col-7 justify-content-around ps-5 pe-5  text-white  ">
             <div>
               <div className="mb-3 cssFontTitleSingleMovie">{final.title}</div>
-              <div className="mb-3">+++ERROR+++ {final.title} </div>
-              {/* ERROR */}
+              <div className="mb-3">Director: {finalDirector.fullName}</div>
               <div className="mb-3">Year: {final.year}</div>
               <div className="mb-3">
                 Running time: {final.running_time} min.

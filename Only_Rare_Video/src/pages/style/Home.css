@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 .cssFontNavbarClass {
-  color: white;
+  color: rgb(255, 255, 255);
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-style: normal;
