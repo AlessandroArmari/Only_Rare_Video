@@ -38,9 +38,11 @@ function ComingSoon() {
     setIsLoading(false);
   }
 
+  /*   PROVO LOADER  
   useEffect(() => {
     fetchComingSoon();
   }, []);
+  */
 
   let final = "";
   let finalError = "";

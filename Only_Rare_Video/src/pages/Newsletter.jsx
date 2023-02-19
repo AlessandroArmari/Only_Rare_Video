@@ -16,7 +16,6 @@ function Newsletter() {
 
   const emailValueHandler = (event) => {
     setEmailValue(event.target.value);
-    console.log(emailValue);
   };
 
   const submitHandler = (event) => {
@@ -26,6 +25,9 @@ function Newsletter() {
       setError(null);
     }
 
+    //Setting to default everytime I submit the form
+
+    setEmailAlreadyExists(false);
     setEmailSentInvalid(false);
 
     //Regex ---> check email when press button
@@ -56,7 +58,9 @@ function Newsletter() {
 
       //prova con errore 406
       .then((response, error) => {
-        if (!response.ok) {
+        if (response.status == 409) {
+          console.log(response);
+          console.log("email already exists!");
           setEmailAlreadyExists(true);
           setEmailValue("");
           return;
@@ -68,11 +72,12 @@ function Newsletter() {
         setInputFieldDisabled("disabled");
         setEmailValue("");
       })
-      //NON CAPISCO COME FUNZIONA CATCH
+      //NON CAPISCO COME FUNZIONA CATCH---> come cattchare errori?
       .catch((error) => {
         setError(error);
         console.error("Error", error);
       });
+
     console.log("I come before the .thens()");
   };
 
@@ -88,18 +93,16 @@ function Newsletter() {
     );
   }
 
+  if (emailAlreadyExists) {
+    final = (
+      <div className="cssFontError mt-4">This email is already registered!</div>
+    );
+  }
+
   if (emailSentCorrectly) {
     final = (
       <div className="cssFontNavbarClass mt-4 text-center">
         You've been succesfully subscribed to our newsletter!
-      </div>
-    );
-  }
-
-  if (emailAlreadyExists) {
-    final = (
-      <div className="cssFontNavbarClass mt-4 text-center">
-        Ts ema aread exsts
       </div>
     );
   }
