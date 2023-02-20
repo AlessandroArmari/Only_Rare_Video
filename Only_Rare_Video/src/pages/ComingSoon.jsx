@@ -73,7 +73,7 @@ function ComingSoon() {
       <section className="mainSectionBg">
         <NavbarNEW></NavbarNEW>
 
-        <section className="mb-5">
+        <section className="mb-2">
           <h2 className="m-5 text-center cssFontNavbarClass">Coming Soon...</h2>
           <div className="container">
             <section className="row gy-5 text-center justify-content-around">

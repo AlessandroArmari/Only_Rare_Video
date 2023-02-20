@@ -83,11 +83,13 @@ function Home() {
   }, []);
 
   return (
-    <section className="mainSectionBg ">
-      <NavbarNEW />
-      <section className="mt-5 mb-5">{final}</section>
-      <CustomFooter />
-    </section>
+    <div >
+      <section className="mainSectionBg ">
+        <NavbarNEW />
+        <section className="mt-5 pb-5">{final}</section>
+        <CustomFooter />
+      </section>
+    </div>
   );
 }
 

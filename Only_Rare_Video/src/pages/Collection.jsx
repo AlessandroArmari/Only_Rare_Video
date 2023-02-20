@@ -84,7 +84,7 @@ function Collection() {
     <section className="mainSectionBg">
       <NavbarNEW />
 
-      <section className="d-flex flex-column justify-content-center">
+      <section className="mb-4 d-flex flex-column justify-content-center">
         {final}
       </section>
       <CustomFooter />

@@ -126,7 +126,7 @@ function Newsletter() {
                 Subscribe to Only Rare Video Newsletter
               </h1>
               <div className="mt-5 text-center">
-                Don't miss a single movie coming out!
+                Don't miss next movies coming out!
               </div>
               <div className=" text-center">
                 You will be granted thousands of discount and deals
