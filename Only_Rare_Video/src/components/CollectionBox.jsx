@@ -4,7 +4,7 @@ import "./style/Media_Query_Collection_Box.css";
 
 function CollectionBox({ content }) {
   return (
-    <section className="container-fluid p-4 text-light  rounded">
+    <section className="container-fluid p-4 text-light rounded">
       <section className="row align-items-center gx-2 rounded collectionBackGround ">
         <img
           className="col-12 col-md-5 p-2 img-fluid rounded classImgCollection"

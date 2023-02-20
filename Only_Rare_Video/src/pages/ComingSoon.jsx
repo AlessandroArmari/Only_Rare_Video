@@ -69,19 +69,21 @@ function ComingSoon() {
   }
 
   return (
-    <section className="mainSectionBg">
-      <NavbarNEW></NavbarNEW>
+    <div className="mainSectionBg">
+      <section className="mainSectionBg">
+        <NavbarNEW></NavbarNEW>
 
-      <section className="mb-5">
-        <h2 className="m-5 text-center cssFontNavbarClass">Coming Soon...</h2>
-        <div className="container">
-          <section className="row gy-5 text-center justify-content-around">
-            {final}
-          </section>
-        </div>
+        <section className="mb-5">
+          <h2 className="m-5 text-center cssFontNavbarClass">Coming Soon...</h2>
+          <div className="container">
+            <section className="row gy-5 text-center justify-content-around">
+              {final}
+            </section>
+          </div>
+        </section>
       </section>
       <CustomFooter />
-    </section>
+    </div>
   );
 }
 

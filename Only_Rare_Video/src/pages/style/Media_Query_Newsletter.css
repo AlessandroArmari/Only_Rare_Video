@@ -1,66 +1,57 @@
 @media screen and (max-width: 768px) {
   /*until 768 ---> let this .CSS work */
 
-  .cssFontCollectionTitle {
+  .newsletterFont {
     color: white;
     font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 15px;
+    font-weight: 370;
     font-style: normal;
-    line-height: 22px;
-    margin-top: 1vh;
+    line-height: 6vh;
   }
 
-  .cssFontCollectionDate {
+  .newsletterTitleFont {
     color: white;
     font-family: "Montserrat", sans-serif;
-    font-size: 12px;
-    font-style: italic;
-    line-height: 19px;
-    margin-top: 1vh;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 7vh;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1050px) {
   /*from 768px to 1050px */
 
-  .cssFontCollectionTitle {
+  .newsletterFont {
     color: white;
     font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
+    font-weight: 370;
     font-style: normal;
-    line-height: 22px;
-    margin-top: 5vh;
+    line-height: 9vh;
   }
 
-  .cssFontCollectionDate {
+  .newsletterTitleFont {
     color: white;
     font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    font-style: italic;
-    line-height: 12px;
-    margin-top: 5vh;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 11vh;
   }
 }
 
 @media screen and (min-width: 1050px) and (max-width: 2000px) {
-  .cssFontCollectionTitle {
+  .newsletterFont {
     color: white;
     font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-size: 22px;
+    font-weight: 370;
     font-style: normal;
-    line-height: 22px;
-    margin-top: 5vh;
+    line-height: 9vh;
   }
 
-  .cssFontCollectionDate {
+  .newsletterTitleFont {
     color: white;
     font-family: "Montserrat", sans-serif;
-    font-size: 15px;
-    font-style: italic;
-    line-height: 12px;
-    margin-top: 5vh;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 11vh;
   }
 }

@@ -3,6 +3,7 @@ import { CustomFooter } from "../components/CustomFooter";
 import { Loading } from "../components/Loading";
 import { Error } from "../components/Error";
 import { NavbarNEW } from "../components/NavbarNEW";
+import "./style/Media_Query_Newsletter.css";
 
 function Newsletter() {
   const [emailValue, setEmailValue] = useState("");
@@ -117,51 +118,46 @@ function Newsletter() {
     <section className="mainSectionBg">
       <NavbarNEW></NavbarNEW>
 
-      <form
-        onSubmit={submitHandler}
-        className="cssFontTextMontserrat"
-        action=""
-      >
-        <section className="d-flex flex-column  my-5 align-items-center">
-          <div className="">
-            <h1 className="mt-4 text-center mb-4">
-              Subscribe to Only Rare Video Newsletter
-            </h1>
-            <div className="mt-5 text-center">
-              Don't miss a single movie coming out!
+      <form onSubmit={submitHandler} className="newsletterFont" action="">
+        <section className="container">
+          <section className="row justify-content-center my-4 align-items-center">
+            <div className="col-10">
+              <h1 className="mt-4 text-center mb-4 newsletterTitleFont">
+                Subscribe to Only Rare Video Newsletter
+              </h1>
+              <div className="mt-5 text-center">
+                Don't miss a single movie coming out!
+              </div>
+              <div className=" text-center">
+                You will be granted thousands of discount and deals
+              </div>
             </div>
-            <div className=" text-center">
-              You will be granted thousands of discount and deals
+            <div className="col-11 col-sm-9 col-md-7 col-lg-6 d-flex mt-5  ">
+              <label className="px-3" htmlFor="email">
+                Email:
+              </label>
+              <input
+                className={
+                  inputFieldDisabled == ""
+                    ? "form-control bg-light"
+                    : "form-control bg-secondary"
+                }
+                value={emailValue}
+                onChange={emailValueHandler}
+                type="text"
+                name="email"
+                id="email"
+                disabled={inputFieldDisabled}
+              />
+              <button
+                className="btn-sm mx-3 py-0 rounded"
+                disabled={inputFieldDisabled}
+              >
+                Send
+              </button>
             </div>
-            <div className="text-center">
-              Join the covenant and never come back, alive...
-            </div>
-          </div>
-          <div className="d-flex mt-5 align-items-center ">
-            <label className="px-3" htmlFor="email">
-              Email:
-            </label>
-            <input
-              className={
-                inputFieldDisabled == ""
-                  ? "form-control bg-light"
-                  : "form-control bg-secondary"
-              }
-              value={emailValue}
-              onChange={emailValueHandler}
-              type="text"
-              name="email"
-              id="email"
-              disabled={inputFieldDisabled}
-            />
-            <button
-              className="btn-sm mx-3  rounded"
-              disabled={inputFieldDisabled}
-            >
-              Send
-            </button>
-          </div>
-          {final}
+            {final}
+          </section>
         </section>
       </form>
 

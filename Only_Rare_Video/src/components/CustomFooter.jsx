@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const CustomFooter = () => {
   return (
-    <div className="container mw-100 ">
+    <div className="container mw-100 fixed-bottom ">
       <section className="row bg-black align-items-center justify-content-around">
         <div className="col-8 pt-2 pb-2  text-white text-decoration-none text-center cssFontFooter">
           All rights reserved © 2023 Only Rare Video
