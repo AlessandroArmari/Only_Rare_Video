@@ -1,9 +1,11 @@
+import "./style/Media_Query_Coming_Soon.css";
+
 const Card_ComingSoon = ({ image, title, plot }) => {
   return (
-    <div className="col-6 ">
-      <img className="mt-4 img-fluid h-75 rounded " src={image} alt={title} />
-      <div className="mt-3 cssFontCollectionTitle">{title}</div>
-      <div className="mt-1 cssFontCollectionDirector">Out on: {plot}</div>
+    <div className="col-10 col-sm-5 comingSoonCardMQ">
+      <img className=" img-fluid   rounded " src={image} alt={title} />
+      <div className=" cssFontCollectionTitle">{title}</div>
+      <div className=" cssFontCollectionDate">Out on: {plot}</div>
     </div>
   );
 };

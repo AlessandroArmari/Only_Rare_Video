@@ -4,8 +4,9 @@ import { Card_Collection } from "../components/Card_Collection";
 import { Card_Home } from "../components/Card_Home";
 import { CustomFooter } from "../components/CustomFooter";
 import { Loading } from "../components/Loading";
-import Navbar from "../components/Navbar";
+import { NavbarNEW } from "../components/NavbarNEW";
 import { SingleMovie } from "./SingleMovie";
+
 
 const SingleCollection = () => {
   const location = useLocation();
@@ -70,7 +71,7 @@ const SingleCollection = () => {
 
   return (
     <section className="mainSectionBg ">
-      <Navbar />
+      <NavbarNEW></NavbarNEW>
       <div className="d-flex flex-column align-items-center  mx-4">
         <div className="mt-4 text-center text-light cssFontNavbarClass">
           {final.collectionName}

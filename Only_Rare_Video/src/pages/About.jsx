@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import { CustomFooter } from "../components/CustomFooter";
 import { Outlet } from "react-router-dom";
 
@@ -12,7 +11,7 @@ function About() {
 
       <section className="pt-5 mx-5 ">
         <h1 className="text-center cssFontNavbarClass ">ABOUT US</h1>
-        <div className="mt-5 mb-5 text-center cssFontTextMontserrat ">
+        <div className="mt-5 mb-5 text-justify cssFontTextMontserrat ">
           Only Rare Video is a leading independent entertainment distribution
           company, established in 1991. Operating in the UK, the Republic of
           Ireland, United States of America and Canada, Only Rare Video is

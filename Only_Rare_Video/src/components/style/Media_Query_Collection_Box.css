@@ -1,0 +1,88 @@
+/* MEDIA QUERY IN COLLECTION BOX */
+
+@media screen and (max-width: 768px) {
+  /*until 768 ---> let this .CSS work */
+
+  .collectionBoxTitleMQ {
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    text-align: center;
+    font-style: normal;
+    line-height: 33px;
+    text-transform: uppercase;
+  }
+
+  .collectionBoxDescriptionMQ {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 370;
+    font-size: 12px;
+    text-align: center;
+
+    font-style: normal;
+    line-height: 36px;
+  }
+
+  .collectionBoxButtonMQ {
+    padding: 1%;
+    margin-bottom: 3vh;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1050px) {
+  /*from 768px to 1050px */
+
+  .collectionBoxTitleMQ {
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 33px;
+    text-transform: uppercase;
+  }
+
+  .collectionBoxDescriptionMQ {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 370;
+    font-size: 13px;
+    font-style: normal;
+    line-height: 36px;
+  }
+
+  .collectionBoxButtonMQ {
+    padding: 1%;
+    margin-bottom:1VH;
+  }
+}
+
+@media screen and (min-width: 1051px) and (max-width: 2000px) {
+  .collectionBoxTitleMQ {
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 33px;
+    text-transform: uppercase;
+  }
+
+  .collectionBoxDescriptionMQ {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 370;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 36px;
+    margin-top: 4vh;
+  }
+
+  .collectionBoxButtonMQ {
+    margin-top: 4vh;
+    padding: 1%;
+    margin-bottom: 0vh;
+  }
+}

@@ -7,7 +7,6 @@ import Home from "./pages/Home";
 import { SingleCollection } from "./pages/SingleCollection";
 import { SingleMovie } from "./pages/SingleMovie";
 import ToBeChosen from "./pages/Newsletter";
-import Navbar from "./components/Navbar";
 import { NavbarNEW } from "./components/NavbarNEW";
 
 // +++REMEMBER--->BROWSER ROUTE IN MAIN.JSX+++

@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const Card_Collection = ({ title, genre, url, director, sanitizeTitle }) => {
   return (
-    <section className="col-2 p-2 mx-2 ">
+    <section className="col-2 p-2 mx-2 comingSoonCardMQ">
       <NavLink state={{ sanitizeTitle }} to="/singlemovie">
         <img
           className="img-overlay img-fluid h-75 w-100 rounded"

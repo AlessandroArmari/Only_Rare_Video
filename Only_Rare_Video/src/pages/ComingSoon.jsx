@@ -73,11 +73,9 @@ function ComingSoon() {
       <NavbarNEW></NavbarNEW>
 
       <section className="mb-5">
-        <h2 className="m-5 text-center cssFontNavbarClass">
-          New stuff coming Soon...
-        </h2>
+        <h2 className="m-5 text-center cssFontNavbarClass">Coming Soon...</h2>
         <div className="container">
-          <section className="row justify-content-between text-center   ">
+          <section className="row gy-5 text-center justify-content-around">
             {final}
           </section>
         </div>

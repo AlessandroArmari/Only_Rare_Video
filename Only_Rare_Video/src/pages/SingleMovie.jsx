@@ -4,7 +4,8 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { CustomFooter } from "../components/CustomFooter";
 import { Loading } from "../components/Loading";
-import Navbar from "../components/Navbar";
+import { NavbarNEW } from "../components/NavbarNEW";
+
 
 const SingleMovie = () => {
   const [error, setError] = useState(null);
@@ -88,7 +89,7 @@ const SingleMovie = () => {
 
   return (
     <section className="bg-dark">
-      <Navbar></Navbar>
+      <NavbarNEW></NavbarNEW>
       <section className="container mb-5">
         <section className="row mt-5 justify-content-between gx-5 ">
           {isLoading && final}

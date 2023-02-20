@@ -24,16 +24,16 @@ const NavbarNEW = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto ">
-              <Nav.Link className="navLinkHover" href="/about">
+              <Nav.Link className="navLinkHover mx-3" href="/about">
                 ABOUT
               </Nav.Link>
-              <Nav.Link className="navLinkHover" href="/collection">
+              <Nav.Link className="navLinkHover mx-3" href="/collection">
                 COLLECTION
               </Nav.Link>
-              <Nav.Link className="navLinkHover" href="/comingsoon">
+              <Nav.Link className="navLinkHover mx-3" href="/comingsoon">
                 OUT SOON
               </Nav.Link>
-              <Nav.Link className="navLinkHover" href="/newsletter">
+              <Nav.Link className="navLinkHover mx-3" href="/newsletter">
                 NEWSLETTER
               </Nav.Link>
             </Nav>

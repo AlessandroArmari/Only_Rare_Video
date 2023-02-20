@@ -83,6 +83,7 @@ function Collection() {
   return (
     <section className="mainSectionBg">
       <NavbarNEW />
+      
       <section className="m-5 d-flex flex-column justify-content-center">
         {final}
       </section>

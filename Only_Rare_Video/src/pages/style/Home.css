@@ -39,22 +39,9 @@
   text-transform: uppercase;
 }
 
-.cssFontCollectionTitle {
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 22px;
-  font-size: 50%;
-}
 
-.cssFontCollectionDirector {
-  color: white;
-  font-family: "Montserrat", sans-serif;
-  font-size: 85%;
-  font-style: italic;
-  line-height: 19px;
-}
+
+
 
 .cssFontFooter {
   color: white;
@@ -71,6 +58,4 @@
   background-color: rgb(0, 0, 0);
 }
 
-.classImgCollection {
-  width: 45%;
-}
+

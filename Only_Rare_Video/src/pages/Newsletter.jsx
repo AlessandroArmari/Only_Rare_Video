@@ -2,7 +2,6 @@ import { useState } from "react";
 import { CustomFooter } from "../components/CustomFooter";
 import { Loading } from "../components/Loading";
 import { Error } from "../components/Error";
-import Navbar from "../components/Navbar";
 import { NavbarNEW } from "../components/NavbarNEW";
 
 function Newsletter() {
