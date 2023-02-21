@@ -86,7 +86,7 @@ function Home() {
     <div >
       <section className="mainSectionBg ">
         <NavbarNEW />
-        <section className="mt-5 pb-5">{final}</section>
+        <section className=" pb-5">{final}</section>
         <CustomFooter />
       </section>
     </div>

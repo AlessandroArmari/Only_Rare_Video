@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import "./style/Card_Home.css";
+import "./style/Media_Query_Card_Home.css";
 
 const Card_Home = ({ title, sanitizeTitle, url, genre, plot }) => {
   //position absolute--->overlay
@@ -10,7 +10,7 @@ const Card_Home = ({ title, sanitizeTitle, url, genre, plot }) => {
   //+++++WORK IN PROGRESS LINE 19
 
   return (
-    <li className="col-3">
+    <li className="m-4 p-0 col-10 col-sm-5 col-md-3 col-lg-3 cardHomeMediaQuery">
       {/* PASSING A PROPS VIA NAVLINK*/}
 
       {/* 1 
@@ -18,9 +18,9 @@ const Card_Home = ({ title, sanitizeTitle, url, genre, plot }) => {
       
       --->go to SingleMovie.jsx_first line    
       */}
-      <NavLink className="" state={{ sanitizeTitle }} to="/singlemovie">
+      <NavLink  state={{ sanitizeTitle }} to="/singlemovie">
         <img
-          className="img-overlay img-fluid h-100 w-100 rounded border border-2 border-white "
+          className="img-overlay  img-fluid h-100 rounded border border-2 border-white imageCardHome"
           src={url}
           id="home_img"
           alt={title}

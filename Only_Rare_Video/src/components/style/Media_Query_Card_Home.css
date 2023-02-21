@@ -1,0 +1,35 @@
+.imageCardHome {
+}
+
+.img-overlay {
+  opacity: 1;
+  transition: 1s;
+  filter: brightness(100%);
+  filter: contrast(100%);
+  filter: saturate(100%);
+}
+
+.img-overlay:hover {
+  opacity: 0.2;
+  transition: 1s;
+  filter: brightness(200%);
+  filter: contrast(200%);
+
+  filter: saturate(300%);
+}
+
+.navLinkHover:hover {
+  transition: 1s;
+  color: red;
+}
+
+.navLinkHover {
+  transition: 1s;
+  color: white;
+}
+
+@media screen and (max-width: 576px) {
+  /*until 576 ---> let this .CSS work */
+  .cardHomeMediaQuery {
+  }
+}
