@@ -6,6 +6,7 @@ import { CustomFooter } from "../components/CustomFooter";
 import { Loading } from "../components/Loading";
 import { NavbarNEW } from "../components/NavbarNEW";
 
+import "./style/Media_Query_Single_Movie.css";
 
 const SingleMovie = () => {
   const [error, setError] = useState(null);
@@ -88,10 +89,10 @@ const SingleMovie = () => {
   }, []);
 
   return (
-    <section className="bg-dark">
+    <section className="bg-dark pb-5">
       <NavbarNEW></NavbarNEW>
-      <section className="container mb-5">
-        <section className="row mt-5 justify-content-between gx-5 ">
+      <section className="container ">
+        <section className="row mt-5 align-items-around justify-content-around gx-5">
           {isLoading && final}
 
           <img
@@ -99,20 +100,16 @@ const SingleMovie = () => {
             src={final.image}
             alt=""
           />
-          <div className="d-flex flex-column col-7 justify-content-around ps-5 pe-5  text-white  ">
-            <div>
-              <div className="mb-3 cssFontTitleSingleMovie">{final.title}</div>
-              <div className="mb-3">Director: {finalDirector.fullName}</div>
-              <div className="mb-3">Year: {final.year}</div>
-              <div className="mb-3">
-                Running time: {final.running_time} min.
-              </div>
-              <div className="mb-3">Genre: {final.genre}</div>
-              <div className="mb-3">Plot: {final.plot}</div>
-            </div>
+          <div className="d-flex flex-column align-items-around justify-content-around col-7 ps-5 pe-5  singleMovieMediaQuery">
+            <div className=" cssFontTitleSingleMovie">{final.title}</div>
+            <div className=" ">Director: {finalDirector.fullName}</div>
+            <div className="">Year: {final.year}</div>
+            <div className="">Running time: {final.running_time} min.</div>
+            <div className="">Genre: {final.genre}</div>
+            <div className=" ">Plot: {final.plot}</div>
             {/* HERE I'M POINTING THE full property in the object director in the object final */}
             <div className="container">
-              <div className="row justify-content-center ">
+              <div className="row mt-3 justify-content-center ">
                 <img className="col-3 " src="src\logo\bluray.png" alt="" />
                 <img className="col-3" src="src\logo\dvd.png" alt="" />
                 <img className="col-3" src="src\logo\prime_video.png" alt="" />

@@ -22,12 +22,10 @@ function Newsletter() {
   const submitHandler = (event) => {
     event.preventDefault();
 
+    //Setting to default everytime I submit the form
     if (error != null) {
       setError(null);
     }
-
-    //Setting to default everytime I submit the form
-
     setEmailAlreadyExists(false);
     setEmailSentInvalid(false);
 
@@ -57,8 +55,13 @@ function Newsletter() {
     })
       //.then((response) => response.json())    --->NOT MANDATORY IN THIS CASE!
 
-      //prova con errore 406
-      .then((response, error) => {
+      /*
+      .then(() => {
+        console.log("prova");
+      })
+      */
+      //Custom ERROR 409 in Back End
+      .then((response) => {
         if (response.status == 409) {
           console.log(response);
           console.log("email already exists!");
@@ -66,6 +69,7 @@ function Newsletter() {
           setEmailValue("");
           return;
         }
+        // .catch()---> solo a livello di chiamata, non gestisce gli errori di "risposta"
         console.log(response);
         console.log(error);
         setIsLoading(false);
@@ -76,7 +80,7 @@ function Newsletter() {
       //NON CAPISCO COME FUNZIONA CATCH---> come cattchare errori?
       .catch((error) => {
         setError(error);
-        console.error("Error", error);
+        console.error("Network issue", error);
       });
 
     console.log("I come before the .thens()");
