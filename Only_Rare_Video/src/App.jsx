@@ -24,6 +24,7 @@ function App() {
 
         Go to Navbar class and search for <Outlet>
         */}
+
         <Route
           element={<NavbarNEW />}
           children={<Route path="/about" element={<About />} />}

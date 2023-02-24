@@ -96,13 +96,13 @@ const SingleMovie = () => {
           {isLoading && final}
 
           <img
-            className="col-4 p-0 img-fluid h-100 rounded  border border-2 border-white "
+            className="col-8 col-sm-4 p-0 img-fluid h-100 rounded  border border-2 border-white "
             src={final.image}
             alt=""
           />
-          <div className="d-flex flex-column align-items-around justify-content-around col-7 ps-5 pe-5  singleMovieMediaQuery">
+          <div className="d-flex flex-column align-items-around justify-content-around col-8 col-sm-7 pt-3 pt-sm-0 ps-sm-5 pe-sm-5  singleMovieMediaQuery">
             <div className=" cssFontTitleSingleMovie">{final.title}</div>
-            <div className=" ">Director: {finalDirector.fullName}</div>
+            <div className="">Director: {finalDirector.fullName}</div>
             <div className="">Year: {final.year}</div>
             <div className="">Running time: {final.running_time} min.</div>
             <div className="">Genre: {final.genre}</div>

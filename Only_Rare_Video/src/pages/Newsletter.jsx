@@ -53,13 +53,6 @@ function Newsletter() {
       },
       body: JSON.stringify(newEmail),
     })
-      //.then((response) => response.json())    --->NOT MANDATORY IN THIS CASE!
-
-      /*
-      .then(() => {
-        console.log("prova");
-      })
-      */
       //Custom ERROR 409 in Back End
       .then((response) => {
         if (response.status == 409) {
@@ -71,13 +64,11 @@ function Newsletter() {
         }
         // .catch()---> solo a livello di chiamata, non gestisce gli errori di "risposta"
         console.log(response);
-        console.log(error);
         setIsLoading(false);
         setEmailSentCorrectly(true);
         setInputFieldDisabled("disabled");
         setEmailValue("");
       })
-      //NON CAPISCO COME FUNZIONA CATCH---> come cattchare errori?
       .catch((error) => {
         setError(error);
         console.error("Network issue", error);
@@ -94,13 +85,17 @@ function Newsletter() {
 
   if (emailSentInvalid) {
     final = (
-      <div className="cssFontError mt-4">Invalid email! Try it again!</div>
+      <div className="cssFontError mt-4 text-center">
+        Invalid email! Try it again!
+      </div>
     );
   }
 
   if (emailAlreadyExists) {
     final = (
-      <div className="cssFontError mt-4">This email is already registered!</div>
+      <div className="cssFontError mt-4 text-center">
+        This email is already registered!
+      </div>
     );
   }
 
